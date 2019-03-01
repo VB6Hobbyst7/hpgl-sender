@@ -108,6 +108,7 @@ class HPGLSender:
             plotlib.plot(self.plotter_port, self.plotter_baud_rate, self.file)
         except Exception as e:
             self.set_status(Status.ERROR)
+            print(e)
         else:
             self.set_status(Status.DONE)
         self.maybe_set_ready()
